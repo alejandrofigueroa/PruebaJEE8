@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./WEB-INF/template.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+    <ui:define name="titulo">
+        
+    </ui:define>
+
+    <ui:define name="contenido">
+        <div class="align-items-center min-vh-100 ">
+            <div class="card login-card">
+                <div class="row no-gutters">
+                    <div class="col-md-5">
+                        <h:graphicImage name="img/login.jpg" class="login-card-img"></h:graphicImage>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
+                            <p class="login-card-description">Inicia sesión con tu cuenta</p>
+                            <h:form>
+                                <div class="form-group">
+                                  
+                                  <h:outputLabel value="Usuario: " for="usuario" />
+                                  <h:inputText id="usuario" class="form-control" value="#{usuariosBean.usuario.usuario}" title="Usuario" required="true" requiredMessage="El usuario es obligatorio"/>
+                                </div>
+                                <div class="form-group mb-4">
+                                  <h:outputLabel value="Contraseña: " for="password" />
+                                  <h:inputSecret  id="password" class="form-control"  value="#{usuariosBean.usuario.password}" title="Password" required="true" requiredMessage="La contraseña es obligatoria"/>
+                                </div>
+                                <h:commandButton value="Ingresar" class="btn btn-block login-btn mb-4" action="#{usuariosBean.verificarCredenciales()}"/>
+                            </h:form>
+                            <p class="login-card-footer-text">No tienes una cuenta? <h:link outcome="/registro" value="Registrarse aquí" class="text-reset"/> </p>
+                        </div>
+                    </div>        
+                </div>
+            </div>
+        </div>
+        
+    </ui:define>
+
+</ui:composition>

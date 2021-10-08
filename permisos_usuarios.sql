@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-10-2021 a las 23:10:21
+-- Tiempo de generación: 09-10-2021 a las 00:40:23
 -- Versión del servidor: 10.4.20-MariaDB
 -- Versión de PHP: 8.0.8
 
@@ -109,7 +109,7 @@ INSERT INTO `roles` (`id_rol`, `nombre_rol`) VALUES
 CREATE TABLE `usuarios` (
   `id_usuario` int(11) NOT NULL,
   `usuario` varchar(60) NOT NULL,
-  `password` varchar(60) NOT NULL,
+  `password` varchar(64) NOT NULL,
   `correo_electronico` varchar(60) NOT NULL,
   `rol_id` int(11) NOT NULL,
   `token` varchar(60) NOT NULL,
@@ -121,7 +121,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `usuario`, `password`, `correo_electronico`, `rol_id`, `token`, `verificacion`) VALUES
-(1, 'adminET', '1e5dabcc989bf0589065a4ee7081d8d47c4f016bf2ee4b0bb06db5b37103', 'alejandrofigueroa416@gmail.com', 1, 'PPhtfDHzB5', 0);
+(1, 'adminET', '1e5dabcc989bf0589065a4ee7081d8d47c4f016bf2ee4b0bb06db5b371039e0b', 'alejandrofigueroa416@gmail.com', 1, 'PPhtfDHzB5', 1);
 
 --
 -- Índices para tablas volcadas
